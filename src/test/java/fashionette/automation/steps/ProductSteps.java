@@ -24,7 +24,6 @@ public class ProductSteps {
     }
 
     public String get_color() {
-
         return "";
     }
 
