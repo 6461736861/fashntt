@@ -32,15 +32,13 @@ public class ProductSteps {
         List<Object> item = new ArrayList<Object>();
         //убрать локатор отсюда! добавить модель Сумка
         List<WebElement> itemsresults = getDriver().findElements(By.cssSelector("[itemprop = \"itemListElement\"]"));
-        for (WebElement itemresult:itemsresults) {
+        for (WebElement itemresult : itemsresults) {
             System.out.println(itemresult.getText());
         }
-
         return null;
     }
 
     public void openSearchedItem(int index) {
-
 
     }
 }
