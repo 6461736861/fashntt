@@ -21,19 +21,27 @@ public class ProductSteps {
         headerPanel.openSearch();
         headerPanel.fillSearch(text);
         headerPanel.submitSearch();
+        searchPage.get_all_searched_items();
     }
 
     public String get_color() {
         return "";
     }
 
-    public List<Object> get_all_searched_items() {
-
-        //убрать локатор отсюда! добавить модель Сумка
- return null;
+    public void get_all_searched_items_steps() {
+       searchPage.get_all_searched_items();
     }
+    //  get_all_searched_items() {
+//
+//        //убрать локатор отсюда! добавить модель Сумка
+//        List<WebElement> itemsresults = getDriver().findElements(By.cssSelector("[itemprop = \"itemListElement\"]"));
+//        for (WebElement itemresult : itemsresults) {
+//            System.out.println(itemresult.getText());
+//        }
+//        return null;
+//    }
 
-    public void openSearchedItem(int index) {
-
-    }
+//    public void openSearchedItem(int index) {
+//
+//    }
 }
