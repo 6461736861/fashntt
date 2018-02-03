@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4315acad-6723-4071-98d6-6fb8adcae2ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/fashionette/automation/features/find/SearchStory.java" afterPath="$PROJECT_DIR$/src/test/java/fashionette/automation/features/find/SearchStory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/fashionette/automation/pages/SearchPage.java" afterPath="$PROJECT_DIR$/src/test/java/fashionette/automation/pages/SearchPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/fashionette/automation/steps/ProductSteps.java" afterPath="$PROJECT_DIR$/src/test/java/fashionette/automation/steps/ProductSteps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/browser-firefox.properties" afterPath="$PROJECT_DIR$/target/site/serenity/browser-firefox.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +69,8 @@
       <file leaf-file-name="SearchPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/fashionette/automation/pages/SearchPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="130" lean-forward="false" selection-start-line="9" selection-start-column="130" selection-end-line="9" selection-end-column="130" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -679,9 +678,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SearchStory - 2018.01.21 at 08h 24m 51s.xml">
-      <configuration name="SearchStory" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SearchStory - 2018.01.21 at 08h 26m 42s.xml">
       <configuration name="SearchStory" configurationId="JUnit" />
     </history-entry>
@@ -707,6 +703,9 @@
       <configuration name="SearchStory" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SearchStory - 2018.02.03 at 17h 14m 08s.xml">
+      <configuration name="SearchStory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchStory - 2018.02.03 at 17h 30m 35s.xml">
       <configuration name="SearchStory" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1215,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/fashionette/automation/pages/SearchPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="130" lean-forward="false" selection-start-line="9" selection-start-column="130" selection-end-line="9" selection-end-column="130" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
