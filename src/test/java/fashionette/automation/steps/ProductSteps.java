@@ -28,13 +28,9 @@ public class ProductSteps {
     }
 
     public List<Object> get_all_searched_items() {
-        List<Object> item = new ArrayList<Object>();
+
         //убрать локатор отсюда! добавить модель Сумка
-        List<WebElement> itemsresults = getDriver().findElements(By.cssSelector("[itemprop = \"itemListElement\"]"));
-        for (WebElement itemresult : itemsresults) {
-            System.out.println(itemresult.getText());
-        }
-        return null;
+ return null;
     }
 
     public void openSearchedItem(int index) {
