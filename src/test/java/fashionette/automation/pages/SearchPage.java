@@ -1,14 +1,31 @@
 package fashionette.automation.pages;
 
+import fashionette.automation.models.Product;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchPage extends PageObject {
 
-    public int get_all_searched_items() {
+    private static final Logger _log = LoggerFactory.getLogger(SearchPage.class);
 
-        System.out.println("itemsresults = " + getDriver().findElements(By.cssSelector("[itemprop = \"itemListElement\"]")).size());
-        return getDriver().findElements(By.cssSelector("[itemprop = \"itemListElement\"]")).size();
-
+    public List<Product> getAllSearchedItems() {
+        List<WebElementFacade> all = findAll(By.cssSelector("[itemprop=itemListElement]"));
+        List<Product> products = new ArrayList<>();
+        for (WebElementFacade item: all) {
+            Product product = new Product();
+            product.name = item.findElement(By.cssSelector(".product--list__item__name")).getText();
+            product.brand = item.findElement(By.cssSelector("[data-product-brand]")).getText();
+            product.price = Double.valueOf(item.findElement(By.cssSelector("[data-product-price]")).getAttribute("content"));
+           // product.lowprice = Double.valueOf(item.findElement(By.cssSelector("[data-product-price-special]")).getAttribute("content"));
+            products.add(product);
+            _log.info(product.toString());
+        }
+        return products;
     }
 }
