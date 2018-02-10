@@ -17,13 +17,15 @@ public class SearchPage extends PageObject {
     public List<Product> getAllSearchedItems() {
         List<WebElementFacade> all = findAll(By.cssSelector("[itemprop=itemListElement]"));
         List<Product> products = new ArrayList<>();
-        for (WebElementFacade item: all) {
+        for (WebElementFacade item : all) {
             Product product = new Product();
             product.name = item.findElement(By.cssSelector(".product--list__item__name")).getText();
             product.brand = item.findElement(By.cssSelector("[data-product-brand]")).getText();
             product.price = Double.valueOf(item.findElement(By.cssSelector("[data-product-price]")).getAttribute("content"));
-           // product.lowprice = Double.valueOf(item.findElement(By.cssSelector("[data-product-price-special]")).getAttribute("content"));
-            products.add(product);
+            if (item.findElements(By.cssSelector("[data-product-price-special]")).size() != 0) {
+                product.lowprice = Double.valueOf(item.findElement(By.cssSelector("[data-product-price-special]")).getAttribute("content"));
+                products.add(product);
+            }
             _log.info(product.toString());
         }
         return products;
