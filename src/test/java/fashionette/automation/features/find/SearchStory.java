@@ -21,5 +21,13 @@ public class SearchStory extends BaseFeature {
         product.search_by_name("black bag");
         List<Product> products = product.get_all_searched_items();
         assertThat(products.get(1).name).containsIgnoringCase("black");
+        assertThat(products.get(1).lowprice).isLessThan(products.get(1).price);
+
+    }
+
+    @Test
+    public void should_return_random_product() {
+        product.search_by_name("Fashion Watch Rosegold");
+        Product products = product.get_random_searched_item();
     }
 } 

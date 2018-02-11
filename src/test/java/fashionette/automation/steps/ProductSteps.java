@@ -21,4 +21,8 @@ public class ProductSteps {
     public List<Product> get_all_searched_items() {
        return searchPage.getAllSearchedItems();
     }
+
+    public Product get_random_searched_item() {
+        return searchPage.openAnyRandomElement();
+    }
 }
