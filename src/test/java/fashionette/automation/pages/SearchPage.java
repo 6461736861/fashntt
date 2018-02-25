@@ -1,11 +1,10 @@
 package fashionette.automation.pages;
 
-import com.github.javafaker.Faker;
 import fashionette.automation.models.Product;
+import fashionette.automation.tech.extentions.ListExtension;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchPage extends PageObject {
-    Faker faker = new Faker();
+
     private static final Logger _log = LoggerFactory.getLogger(SearchPage.class);
 
     public List<Product> getAllSearchedItems() {
@@ -35,8 +34,10 @@ public class SearchPage extends PageObject {
 
     public Product openAnyRandomElement() {
         List<WebElementFacade> all = findAll(By.cssSelector("[itemprop=itemListElement]"));
-        WebElementFacade randomElement = all.get(faker.number().numberBetween(1, all.size()));
+        // WebElementFacade randomElement = all.get(new Random().nextInt(all.size()));
+        WebElementFacade randomElement = ListExtension.randomItem(all);
         clickOn(randomElement);
+
         return null;
     }
 }

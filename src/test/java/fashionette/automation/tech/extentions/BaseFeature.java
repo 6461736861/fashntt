@@ -1,4 +1,4 @@
-package fashionette.automation.features;
+package fashionette.automation.tech.extentions;
 
 import com.github.javafaker.Faker;
 import net.serenitybdd.junit.runners.SerenityRunner;
